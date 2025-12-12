@@ -1,0 +1,157 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html
+{
+    background: rgb(32, 32, 32)
+}
+
+
+.hero
+{
+    position: relative;
+    height: 60vh;
+    overflow:hidden;
+}
+
+.hero img
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text
+{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    color: goldenrod;
+    text-align: center;
+    font-size: 48px;
+    z-index: 2;
+}
+
+.hero .overlay
+{
+    position: absolute;
+    inset: 0;
+    background: black;
+    opacity: 0.4;
+    transition: opacity 0.1s linear;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.textMain {
+    margin-top: 10px;
+    color: rgb(226, 226, 226);
+    font-size: 19px;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.textMain::first-letter
+{
+    font-size: 40px;
+}
+
+.textMain ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 25px;
+}
+
+.textMain li {
+    margin-bottom: 8px;
+}
+
+.tiles
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tile
+{
+    display: block;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+    background: black;
+    transition: transform 0.15s;
+}
+
+.tile:hover
+{
+    transform: scale(1.08);
+    border: 2px solid goldenrod;
+}
+
+.tile .img-box
+{
+    height: 50%;
+    min-height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tile .text
+{
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+footer
+{
+    background-color: rgb(58, 58, 58);
+    text-align: center;
+    color: goldenrod;
+    padding: 10px;
+}
+
+footer hr
+{
+    margin: 0 auto 10px auto; /* 0 gora 10 w dol*/
+    border: none;
+    height: 2px;
+    width: 55.9%;
+    background-color:goldenrod;
+}
+
+.navbar
+{
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    background-color: goldenrod;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+
+
